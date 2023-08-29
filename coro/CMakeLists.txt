@@ -1,8 +1,11 @@
-# Tasks
+begin_task()
 
-# libc++
-add_compile_options(-stdlib=libc++)
-add_link_options(-stdlib=libc++)
+set_task_sources(coroutine.hpp coroutine.cpp)
 
-add_subdirectory(gorroutines)
-add_subdirectory(task)
+# Playground
+add_task_playground(play)
+
+# Tests
+add_task_test(unit_tests tests/unit.cpp)
+
+end_task()
